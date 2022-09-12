@@ -17,12 +17,12 @@ class MainActivity : AppCompatActivity() {
         slider= findViewById(R.id.sb_slider) as SeekBar
         value= findViewById(R.id.tv_result) as TextView
 
-        slider.max=50
+        slider.max=3
 
         slider.setOnSeekBarChangeListener(object  :   SeekBar.OnSeekBarChangeListener   {
 
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-               value.text=progress.toString()
+               value.text=(progress*12).toString()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
